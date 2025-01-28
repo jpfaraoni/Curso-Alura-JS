@@ -17,13 +17,16 @@
 //     alert('Não pode tirar a habilitação!');
 // }
 alert('Boas vinda ao jogo do número secreto!')
-let numeroSecreto = 5;
+let numeroSecreto = 10;
 console.log(numeroSecreto)
 let chute = prompt('Tente acertar o número: ');
 
-if (chute == numeroSecreto){
-    alert('Você acertou!')
-}
-else {
-    alert('Você errou!')
-}
+while (chute != numeroSecreto){
+    if (chute < numeroSecreto) {
+        alert('Seu número é menor que o número secreto.')
+    }
+    else if (chute > numeroSecreto) {
+        alert('Seu número é maior que o número secreto.')
+    }
+    chute = prompt('Tente acertar o número: ');}
+alert(`Você acertou o número secreto ${numeroSecreto}`)
